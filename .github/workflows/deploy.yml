@@ -1,0 +1,14 @@
+name: CI/CD Build Test
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build personal web docker image
+        run: docker build -t personal-web .

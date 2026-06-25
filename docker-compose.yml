@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  # 个人介绍网站
+  personal-website:
+    build: .
+    ports:
+      - "8080:80"
+    restart: always
+
+  # 静态Todo待办应用
+  todo-app:
+    image: nginx:alpine
+    volumes:
+      - ./todo-app:/usr/share/nginx/html
+    ports:
+      - "3000:80"
+    restart: always

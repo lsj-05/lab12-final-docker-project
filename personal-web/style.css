@@ -1,0 +1,10 @@
+.profile-box{
+    width: 620px;
+    margin: 70px auto;
+    text-align: center;
+}
+.avatar{
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #ddd;
+}
